@@ -1,5 +1,6 @@
 package com.example.todolist
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -33,11 +34,12 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.action_todo -> {
-                    // Show Todo functionality
+                    startActivity(Intent(this, TodoActivity::class.java))
                     true
                 }
                 R.id.action_shopping_list -> {
-                    // Show ShoppingList functionality
+                    startActivity(Intent(this, ShoppingListActivity::class.java))
+
                     true
                 }
                 else -> false
